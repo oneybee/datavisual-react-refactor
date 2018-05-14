@@ -59,18 +59,120 @@ class Page01Component extends Component {
   render() {
     return (
       <Page01>
+        <InfoBannerComponent />
+        <Page01.Title> 15-16 분데스리가 팀별 승리, 패배 횟수 </Page01.Title>
         <Page01.Charts>
           <Page01.Pie>
-            a
+            <Page01.CenterWrapper>
+              <Page01.TextLabel>
+                <Page01.Dot red />{data[0]['value']}
+              </Page01.TextLabel>
+              <Page01.TextLabel>
+                <Page01.Dot blue />{data[1]['value']}
+              </Page01.TextLabel>
+            </Page01.CenterWrapper>
+            <PieChart width={85} height={85}>
+              <Pie
+                dataKey="value"
+                data={data}
+                cx={40} 
+                cy={40} 
+                innerRadius={24}
+                outerRadius={30} 
+                fill="#8884d8"
+                paddingAngle={0}
+              >
+                {
+                  data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
+                }
+              </Pie>
+              <text className="piechart-label" x={45} y={50} textAnchor="middle">
+              Bayern </text>
+            </PieChart>
           </Page01.Pie>
           <Page01.Pie>
-            a
+          <Page01.CenterWrapper>
+              <Page01.TextLabel>
+                <Page01.Dot red />{data[0]['value']}
+              </Page01.TextLabel>
+              <Page01.TextLabel>
+                <Page01.Dot blue />{data[1]['value']}
+              </Page01.TextLabel>
+            </Page01.CenterWrapper>
+            <PieChart width={85} height={85}>
+              <Pie
+                dataKey="value"
+                data={data}
+                cx={40} 
+                cy={40} 
+                innerRadius={24}
+                outerRadius={30} 
+                fill="#8884d8"
+                paddingAngle={0}
+              >
+                {
+                  data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
+                }
+              </Pie>
+              <text className="piechart-label" x={45} y={50} textAnchor="middle">
+              Bayern </text>
+            </PieChart>
           </Page01.Pie>
           <Page01.Pie>
-            a
+          <Page01.CenterWrapper>
+              <Page01.TextLabel>
+                <Page01.Dot red />{data[0]['value']}
+              </Page01.TextLabel>
+              <Page01.TextLabel>
+                <Page01.Dot blue />{data[1]['value']}
+              </Page01.TextLabel>
+            </Page01.CenterWrapper>
+            <PieChart width={85} height={85}>
+              <Pie
+                dataKey="value"
+                data={data}
+                cx={40} 
+                cy={40} 
+                innerRadius={24}
+                outerRadius={30} 
+                fill="#8884d8"
+                paddingAngle={0}
+              >
+                {
+                  data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
+                }
+              </Pie>
+              <text className="piechart-label" x={45} y={50} textAnchor="middle">
+              Bayern </text>
+            </PieChart>
           </Page01.Pie>
           <Page01.Pie>
-            a
+          <Page01.CenterWrapper>
+              <Page01.TextLabel>
+                <Page01.Dot red />{data[0]['value']}
+              </Page01.TextLabel>
+              <Page01.TextLabel>
+                <Page01.Dot blue />{data[1]['value']}
+              </Page01.TextLabel>
+            </Page01.CenterWrapper>
+            <PieChart width={85} height={85}>
+              <Pie
+                dataKey="value"
+                data={data}
+                cx={40} 
+                cy={40} 
+                innerRadius={24}
+                outerRadius={30} 
+                fill="#8884d8"
+                paddingAngle={0}
+              >
+                {
+                  data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
+                }
+              </Pie>
+              <text className="piechart-label" x={45} y={50} textAnchor="middle">
+              Bayern </text>
+            </PieChart>
           </Page01.Pie>
         </Page01.Charts>
       </Page01>

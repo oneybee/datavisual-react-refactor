@@ -9,5 +9,8 @@ const Pie = ({className, children}) => {
     </Column>
   )
 }
+const PieStyled = styled(Pie)`
+  padding: 0 !important;
+`
 
-export default Pie;
+export default PieStyled;
