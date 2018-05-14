@@ -4,6 +4,8 @@ import { H1 } from '../../../../elements';
 import media from '../../../../libs/ruucm-blocks/tools/media'
 import { PaddingWrapper, Row, Column, EmptySpace } from '../../../../libs/ruucm-blocks';
 import { center } from '../../../../libs/ruucm-blocks/tools/mixins'
+import back01 from '../../../../../assets/images/box-color-02.png'
+import back02 from '../../../../../assets/images/box-color-01.png'
 
 const CenterWrapper = styled.div`
   text-align: center;
@@ -29,10 +31,10 @@ const Card = styled(CardInner)`
   margin-top: 30px;
   position: relative;
   ${props => props.backRed && css`
-    background: red;
+    background: url(${back01}) no-repeat center;
   `}
   ${props => props.backBlue && css`
-    background: blue;
+    background: url(${back02}) no-repeat center;
   `}
   
 `;
