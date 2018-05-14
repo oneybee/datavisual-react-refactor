@@ -1,6 +1,4 @@
 import React, {component} from 'react';
-import './InfoBanner.scss';
-import H1 from '../../elements/H1';
 import InfoBanner from './block/InfoBanner';
 
 export default function InfoBannerComponent() {
