@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'Recharts';
 import { log } from 'ruucm-util'
 import InfoBannerComponent from '../InfoBanner';
-import './Page02.scss'
+import Page02 from './block/Page02';
 
 var obj = {  
   method: 'GET',
@@ -52,36 +52,29 @@ class Page02Component extends Component {
   }
   render() {
     return (
-      <div className="wins-count">
+      <Page02>
         <InfoBannerComponent />
-        <div className="section-03">
-          <a className="font">
-            <div>
-              <p>2015-2017</p>
-              <span className="piechart-text-label"><div className="label-point win"></div></span>
-            </div>
-            <p>바이에른뮌헨의 최근 리그 승리 횟수</p>
-          </a>
-          <div className="areachart">
-              {(this.state.bayernWins[0]['wins'] != 0 
-              && this.state.bayernWins[1]['wins'] != 0
-              && this.state.bayernWins[2]['wins'] != 0)? (
-              <AreaChart width={335} height={250} data={this.state.bayernWins}
-              margin={{top: 5, right: 0, left: 0, bottom: 5}}>
-                <defs>
-                  <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="rgb(137, 166, 255)" stopOpacity={0.1}/>
-                    <stop offset="95%" stopColor="rgb(137, 166, 255)" stopOpacity={0.4}/>
-                  </linearGradient>
-                </defs>
-                <XAxis dataKey="name"/>
-                <Tooltip/>
-                <Area type='monotone' dataKey='wins' stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
-              </AreaChart>
-            ):(<p>loading..</p>)}
-          </div>
-        </div>
-      </div>
+        <Page02.Desc>2015-2017</Page02.Desc>
+        <Page02.Desc>바이에른뮌헨의 최근 리그 승리 횟수</Page02.Desc>
+        <Page02.ChartWrapper>
+          {(this.state.bayernWins[0]['wins'] != 0 
+          && this.state.bayernWins[1]['wins'] != 0
+          && this.state.bayernWins[2]['wins'] != 0)? (
+          <AreaChart width={335} height={250} data={this.state.bayernWins}
+          margin={{top: 5, right: 0, left: 0, bottom: 5}}>
+            <defs>
+              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="rgb(137, 166, 255)" stopOpacity={0.1}/>
+                <stop offset="95%" stopColor="rgb(137, 166, 255)" stopOpacity={0.4}/>
+              </linearGradient>
+            </defs>
+            <XAxis dataKey="name"/>
+            <Tooltip/>
+            <Area type='monotone' dataKey='wins' stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+          </AreaChart>
+          ):(<p>loading..</p>)}
+        </Page02.ChartWrapper>
+      </Page02>
     )
   }
 }
