@@ -4,7 +4,7 @@ import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'Recharts';
 import { PieChart, Pie, Sector, Cell } from 'Recharts';
 import { log } from 'ruucm-util'
 import InfoBannerComponent from '../InfoBanner';
-import './Home.scss';
+import './Page01.scss';
 
 const data = [{name: 'wins', value: 28}, {name: 'losses', value: 2}, {name: 'draws', value:4}
                  ];
@@ -33,7 +33,7 @@ const dataA = [
       {name: 'Page F', uv: 2390, pv: 3800, amt: 2500},
       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
-class HomeComponent extends Component {
+class Page01Component extends Component {
   constructor() {
     super()
     this.state = {
@@ -157,4 +157,4 @@ class HomeComponent extends Component {
   }
 }
 
-export default HomeComponent;
+export default Page01Component;
