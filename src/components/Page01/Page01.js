@@ -93,16 +93,16 @@ class Page01Component extends Component {
           <Page01.Pie>
           <Page01.CenterWrapper>
               <Page01.TextLabel>
-                <Page01.Dot red />{data[0]['value']}
+                <Page01.Dot red />{data01[0]['value']}
               </Page01.TextLabel>
               <Page01.TextLabel>
-                <Page01.Dot blue />{data[1]['value']}
+                <Page01.Dot blue />{data01[1]['value']}
               </Page01.TextLabel>
             </Page01.CenterWrapper>
             <PieChart width={85} height={85}>
               <Pie
                 dataKey="value"
-                data={data}
+                data={data01}
                 cx={40} 
                 cy={40} 
                 innerRadius={24}
@@ -115,22 +115,22 @@ class Page01Component extends Component {
                 }
               </Pie>
               <text className="piechart-label" x={45} y={50} textAnchor="middle">
-              Bayern </text>
+              BVB </text>
             </PieChart>
           </Page01.Pie>
           <Page01.Pie>
           <Page01.CenterWrapper>
               <Page01.TextLabel>
-                <Page01.Dot red />{data[0]['value']}
+                <Page01.Dot red />{data02[0]['value']}
               </Page01.TextLabel>
               <Page01.TextLabel>
-                <Page01.Dot blue />{data[1]['value']}
+                <Page01.Dot blue />{data02[1]['value']}
               </Page01.TextLabel>
             </Page01.CenterWrapper>
             <PieChart width={85} height={85}>
               <Pie
                 dataKey="value"
-                data={data}
+                data={data02}
                 cx={40} 
                 cy={40} 
                 innerRadius={24}
@@ -143,22 +143,22 @@ class Page01Component extends Component {
                 }
               </Pie>
               <text className="piechart-label" x={45} y={50} textAnchor="middle">
-              Bayern </text>
+              Leverkusen </text>
             </PieChart>
           </Page01.Pie>
           <Page01.Pie>
           <Page01.CenterWrapper>
               <Page01.TextLabel>
-                <Page01.Dot red />{data[0]['value']}
+                <Page01.Dot red />{data03[0]['value']}
               </Page01.TextLabel>
               <Page01.TextLabel>
-                <Page01.Dot blue />{data[1]['value']}
+                <Page01.Dot blue />{data03[1]['value']}
               </Page01.TextLabel>
             </Page01.CenterWrapper>
             <PieChart width={85} height={85}>
               <Pie
                 dataKey="value"
-                data={data}
+                data={data03}
                 cx={40} 
                 cy={40} 
                 innerRadius={24}
@@ -171,7 +171,7 @@ class Page01Component extends Component {
                 }
               </Pie>
               <text className="piechart-label" x={45} y={50} textAnchor="middle">
-              Bayern </text>
+              Gladbach </text>
             </PieChart>
           </Page01.Pie>
         </Page01.Charts>
