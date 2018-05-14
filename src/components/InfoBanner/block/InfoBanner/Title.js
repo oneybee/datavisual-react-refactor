@@ -5,14 +5,11 @@ import media from '../../../../libs/ruucm-blocks/tools/media'
 
 
 const Title = styled.div`
-  color: #071A52;
-  font-size: 28px;
-  font-family: NanumSquare;
-  line-height: 2em;
-  /* ${media.phone`
-    line-height: 3.3em;
-    font-weight: 900;
-  `} */
+  position: relative;
+  font-size: 24pt;
+  font-weight: 900;
+  width: 100%;
+  text-align: center;
 `
 
 export default Title;

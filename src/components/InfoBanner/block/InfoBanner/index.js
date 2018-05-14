@@ -13,6 +13,7 @@ const InfoBannerInner = ({children}) => {
 }
 
 const InfoBanner = styled(InfoBannerInner)`
+  margin-top: 30px;
 `;
 
 InfoBanner.Title = Title;
