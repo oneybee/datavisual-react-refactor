@@ -11,6 +11,10 @@ const Pie = ({className, children}) => {
 }
 const PieStyled = styled(Pie)`
   padding: 0 !important;
+  .piechart-label {
+    font-size: 10px !important;
+    font-weight: 700;
+  }
 `
 
 export default PieStyled;

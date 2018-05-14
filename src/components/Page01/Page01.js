@@ -34,6 +34,7 @@ const dataA = [
       {name: 'Page F', uv: 2390, pv: 3800, amt: 2500},
       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
+
 class Page01Component extends Component {
   constructor() {
     super()
