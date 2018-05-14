@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'Recharts';
 import { log } from 'ruucm-util'
 import InfoBannerComponent from '../InfoBanner';
-import './WinsCount.scss'
+import './Page02.scss'
 
 var obj = {  
   method: 'GET',
@@ -16,7 +16,7 @@ var ary = [
   {name: '2016-2017', wins: 0},
   {name: '2017-2018', wins:0}
 ];
-class WinsCountComponent extends Component {
+class Page02Component extends Component {
   constructor() {
     super()
     this.state = {
@@ -86,4 +86,4 @@ class WinsCountComponent extends Component {
   }
 }
 
-export default WinsCountComponent;
+export default Page02Component;
