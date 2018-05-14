@@ -1,9 +1,9 @@
 import React from 'react';
 import Interactive from 'react-interactive';
 import { Switch, Route } from 'react-router-dom';
-import HomeComponent from './Home';
+import Page01Component from './Page01';
 import AboutComponent from './About';
-import WinsCountComponent from './WinsCount';
+import Page02Component from './Page02';
 import HeaderComponent from './Header';
 import PageNotFound from './PageNotFound';
 import BottomNavComponent from './BottomNav';
@@ -14,9 +14,9 @@ export default function App() {
     <div className='app'>
       <HeaderComponent />
       <Switch>
-        <Route exact path="/" component={HomeComponent} />
+        <Route exact path="/" component={Page01Component} />
         <Route path="/about" component={AboutComponent} />
-        <Route path="/wins" component={WinsCountComponent} />
+        <Route path="/wins" component={Page02Component} />
         <Route component={PageNotFound} />
       </Switch>
       <BottomNavComponent />

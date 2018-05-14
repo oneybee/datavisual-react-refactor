@@ -5,6 +5,7 @@ import { PieChart, Pie, Sector, Cell } from 'Recharts';
 import { log } from 'ruucm-util'
 import InfoBannerComponent from '../InfoBanner';
 import './Page01.scss';
+import Page01 from './block/Page01';
 
 const data = [{name: 'wins', value: 28}, {name: 'losses', value: 2}, {name: 'draws', value:4}
                  ];
@@ -57,102 +58,22 @@ class Page01Component extends Component {
   }
   render() {
     return (
-      <div className="home">
-        <InfoBannerComponent />
-        <div className="section-02">          
-          <h1> 15-16 분데스리가 팀별 승리, 패배 횟수 </h1>
-          <div className="row piechart-text-label-wrapper">
-            <div className="col-3">
-              <span className="piechart-text-label"><div className="label-point win"></div>{data[0]['value']}</span>
-              <span className="piechart-text-label"><div className="label-point loss"></div>{data[1]['value']}</span>
-              <PieChart width={85} height={85}>
-                <Pie
-                  dataKey="value"
-                  data={data}
-                  cx={40} 
-                  cy={40} 
-                  innerRadius={24}
-                  outerRadius={30} 
-                  fill="#8884d8"
-                  paddingAngle={0}
-                >
-                  {
-                    data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
-                  }
-                </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle">
-                Bayern </text>
-              </PieChart>
-            </div>
-            <div className="col-3">
-              <span className="piechart-text-label"><div className="label-point win"></div>{data01[0]['value']}</span>
-              <span className="piechart-text-label"><div className="label-point loss"></div>{data01[1]['value']}</span>
-              <PieChart width={93} height={85}>
-                <Pie
-                  dataKey="value"
-                  data={data01}
-                  cx={40} 
-                  cy={40} 
-                  innerRadius={24}
-                  outerRadius={30} 
-                  fill="#8884d8"
-                  paddingAngle={0}
-                >
-                  {
-                    data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
-                  }
-                </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle">
-                BVB </text>
-              </PieChart>
-            </div>
-            <div className="col-3">
-              <span className="piechart-text-label"><div className="label-point win"></div>{data02[0]['value']}</span>
-              <span className="piechart-text-label"><div className="label-point loss"></div>{data02[1]['value']}</span>
-              <PieChart width={93} height={85}>
-                <Pie
-                  dataKey="value"
-                  data={data02}
-                  cx={40} 
-                  cy={40} 
-                  innerRadius={24}
-                  outerRadius={30} 
-                  fill="#8884d8"
-                  paddingAngle={0}
-                >
-                  {
-                    data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
-                  }
-                </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle">
-                Leverkusen </text>
-              </PieChart>
-            </div>
-            <div className="col-3">
-              <span className="piechart-text-label"><div className="label-point win"></div>{data03[0]['value']}</span>
-              <span className="piechart-text-label"><div className="label-point loss"></div>{data03[1]['value']}</span>
-              <PieChart width={93} height={85}>
-                <Pie
-                  dataKey="value"
-                  data={data03}
-                  cx={40} 
-                  cy={40} 
-                  innerRadius={24}
-                  outerRadius={30} 
-                  fill="#8884d8"
-                  paddingAngle={0}
-                >
-                  {
-                    data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
-                  }
-                </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle">
-                Gladbach </text>
-              </PieChart>
-            </div>
-          </div>
-        </div> 
-      </div>
+      <Page01>
+        <Page01.Charts>
+          <Page01.Pie>
+            a
+          </Page01.Pie>
+          <Page01.Pie>
+            a
+          </Page01.Pie>
+          <Page01.Pie>
+            a
+          </Page01.Pie>
+          <Page01.Pie>
+            a
+          </Page01.Pie>
+        </Page01.Charts>
+      </Page01>
     )
   }
 }
