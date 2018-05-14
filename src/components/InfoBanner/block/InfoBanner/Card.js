@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { H1 } from '../../../../elements';
 import media from '../../../../libs/ruucm-blocks/tools/media'
 import { PaddingWrapper, Row, Column, EmptySpace } from '../../../../libs/ruucm-blocks';
 import { center } from '../../../../libs/ruucm-blocks/tools/mixins'

@@ -7,7 +7,7 @@ const ChartsInner = ({className, children}) => {
 }
 
 const Charts = styled(ChartsInner)`
-  padding: 0 20px;
+  padding: 0 10px;
 `;
 
 export default Charts;
